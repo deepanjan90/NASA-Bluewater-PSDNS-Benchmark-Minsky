@@ -1,0 +1,20 @@
+This example runs on 128 nodes for a 2048^3 problem. It places 32 MPI's on a node. As a result the
+aprun command in the PBS script file batch is ``aprun -n 4096 -N32 ...''
+
+For each new 128 node run, after making a new directory and copying the files input, dims, batch,
+prep_dirs from here, one needs to mkdir iostep_timings, and excutes the command ``prep_dirs 64" 
+to generate the outpen directory for checkpoint data.  
+
+The file dim: Depending on the system, dims may need to be changed for a different paralell 
+decomposition. Currently, dims contains the line ``32 128'', implying a iproc x jproc = 32*128
+decompostion for a total of 4096 MPI tasks for a pure MPI run. Usually, iproc is set to the 
+number of cores on a node, and jproc the number of nodes. Also usually, iproc < jproc. 
+
+The file batch: The the aprun command in this PBS script file needs to change according to the
+file dim for the corret number of MPI tasks, which is iproc*jproc. It asks for a 30 minute system
+time and specifies a pure MPI run in its aprun command.
+
+The input file: The input file here is set up for running the PSDNS code initialized with 
+sinusoidal velocity field. It takes 90 steps for the numerical intergration, generateing 
+checkpoints every 45 steps, and IO every 9 steps. It is also set up such that only velocity 
+fields are saved in a checkpoint. 
