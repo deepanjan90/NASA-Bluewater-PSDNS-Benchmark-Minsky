@@ -8,8 +8,8 @@ c converted to cylindrical truncation scheme, by P.K.Y. and D.D., 11/29/09
 c
       use comsp
 c
-      implicit none
-	include 'intvars'
+      !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 c
 	real, allocatable :: ratio(:)

@@ -1,6 +1,6 @@
 	subroutine prni(char)
 	use com
-	implicit none
+	!#deepcustom#	implicit none
 !	integer :: in
 !	integer :: ia(in)
 !	integer :: numc,nchar

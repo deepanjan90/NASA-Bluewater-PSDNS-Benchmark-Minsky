@@ -1,6 +1,6 @@
 	subroutine epfftw(ux,uxc,uy,uz)
 	use comp
-	implicit none
+	!#deepcustom#	implicit none
 
  	real(b8) :: ux(nxpad,zisz,yjsz,nu)
  	complex(b8) :: uxc(nxhpad,zisz,yjsz,nu)
@@ -26,7 +26,7 @@ c
 
 #ifdef FFTW
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
 	if (fftw_flag.eq.FFTW_ESTIMATE) then
 	if (taskid.eq.0) print *,'enter epfftw: ESTIMATE'

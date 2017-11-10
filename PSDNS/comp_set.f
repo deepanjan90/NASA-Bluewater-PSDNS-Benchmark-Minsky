@@ -3,7 +3,7 @@
       use comp
       use force_mod
  
-      implicit none
+      !#deepcustom#	implicit none
 
       integer :: szux,szuy,szuz,padxm,padym,padzm
 

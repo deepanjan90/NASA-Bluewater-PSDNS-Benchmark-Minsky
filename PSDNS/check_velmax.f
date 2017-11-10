@@ -1,8 +1,8 @@
 	subroutine check_velmax (ux,char)
 !
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 	character(*) char
 !
 	integer icall

@@ -3,8 +3,8 @@ c
 c cylindrical truncation version
 
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 	integer a
       real(b8) :: sqkx,sqkz,sqk,two9,rnxi,rnyi,rnzi
 c

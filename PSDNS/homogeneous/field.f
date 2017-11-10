@@ -13,8 +13,8 @@
 #ifdef RANDOM_SEED
 	use ranseed
 #endif
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       complex(b8) :: uny(ny,zjsz*xisz,3+nc)
       complex :: twopii,argc,ctmp1,ctmp2,ctmp,alpha,beta

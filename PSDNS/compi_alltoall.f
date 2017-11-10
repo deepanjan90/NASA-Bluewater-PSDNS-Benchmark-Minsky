@@ -1,7 +1,7 @@
 #if defined (CAF) || defined (CAF_TEST)
       module mod_compi_alltoall
       use precision
-      implicit none
+      !#deepcustom#	implicit none
 ! Set the stripmine blocksize in bytes; aligned on ialignb byte boundaries
       integer,parameter::sbb=512,ialignb=64
 ! Set the size of the coarray buffer used during the transfers
@@ -21,7 +21,7 @@
 ! WARNING: PSDNS ALSO SETS ITS OWN RANDOM SEEDS; THERE COULD BE SIDE EFFETS!
       use mod_compi_alltoall
       use mpicom
-      implicit none
+      !#deepcustom#	implicit none
       integer seedsize, i
       integer,allocatable::seed(:)
       call random_seed(size=seedsize)    
@@ -40,7 +40,7 @@
 
       subroutine compi_alltoall(src,des,sendbytes,comm)
       use mod_compi_alltoall
-      implicit none
+      !#deepcustom#	implicit none
       
       complex(b8), intent(out), dimension(*) :: des
       complex(b8), intent(in) , dimension(*) :: src
@@ -194,7 +194,7 @@
      &                           des,rcount,rdispls,comm)
 ! Note that all the counts are in bytes.
       use mod_compi_alltoall
-      implicit none
+      !#deepcustom#	implicit none
       complex(b8), intent(out), dimension(*) :: des
       complex(b8), intent(in) , dimension(*) :: src
       integer blksize,rri,ri,ti,im,maxrcount
@@ -327,7 +327,7 @@
 
       module mod_compi_alltoall
       use precision
-      implicit none
+      !#deepcustom#	implicit none
 ! Set the stripmine blocksize in bytes
       integer,parameter::sbb=512,elemsz=b8*2
       integer, save :: sb=sbb/elemsz
@@ -351,7 +351,7 @@
 ! WARNING: PSDNS ALSO SETS ITS OWN RANDOM SEEDS; THERE COULD BE SIDE EFFETS!
       use mod_compi_alltoall
       use mpicom
-      implicit none
+      !#deepcustom#	implicit none
       integer seedsize, i
       integer comxsz,coisz,nvb
       integer,allocatable::seed(:)
@@ -387,7 +387,7 @@
       subroutine init_compi_col()
       use mod_compi_alltoall
       use mpicom
-      implicit none
+      !#deepcustom#	implicit none
       integer :: i,i1,i2
 
       if_col=0
@@ -415,7 +415,7 @@
       subroutine init_compi_row()
       use mod_compi_alltoall
       use mpicom
-      implicit none
+      !#deepcustom#	implicit none
       integer :: i,i1,i2
 
       if_row=0

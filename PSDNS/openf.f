@@ -1,6 +1,6 @@
 	subroutine openf
 	use com
-	implicit none
+	!#deepcustom#	implicit none
 
 	character*5 numer
 	character*16 fn

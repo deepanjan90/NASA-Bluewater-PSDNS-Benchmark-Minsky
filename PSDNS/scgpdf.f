@@ -9,8 +9,8 @@ c for all scalars)
 #ifndef NOSCALAR
  
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 !
 ! standardized pdf of gradients of i-th scalar, with 
 ! distinction between components parallel and perpendicular 
@@ -200,8 +200,8 @@ c
 	subroutine scgpdf_lc (nddu,hist,gradsum)
 c
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 	integer nddu,jthr
 	real(b8) hist(nddu,nc,2,0:num_thr-1)
 c

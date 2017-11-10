@@ -1,8 +1,8 @@
           subroutine dissenst (uny,unx,uy,ux)
 c
             use comp
-            implicit none
-            include 'intvars'
+            !#deepcustom#	implicit none
+            !#deepcustom# 	implicit none
 
         complex(b8) :: uny(nypad,zjsz*xisz,3)
         complex(b8) :: uy(nypad,zjsz*xisz,5)

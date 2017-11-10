@@ -1,8 +1,8 @@
 	subroutine init()
 
 	use com
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
  
 	integer :: i
 

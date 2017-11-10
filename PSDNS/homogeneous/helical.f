@@ -9,8 +9,8 @@
 
 #ifdef ROTD
         use comsp        
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 !new datastructure
         complex(b8) :: uy(ny,zjsz*xisz,nu)

@@ -23,7 +23,7 @@
 #ifdef LAG
 	use compart, only: nom
 #endif
-	implicit none
+	!#deepcustom#	implicit none
 	integer nid,nrd,nk,icall,i,j,nrc,nic,nic2,nrc2,lu
       parameter ( nid=100,  nk=20 )
       integer :: irdata(nid),isdata(nid)

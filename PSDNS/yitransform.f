@@ -2,7 +2,7 @@
 !to be yitransform in wavespace
         use wavespace_module
         use comp
-        implicit none
+        !#deepcustom#	implicit none
 
         complex(b8) :: uy(ny,zjsz,xisz,nu)
 	integer :: i,j,m

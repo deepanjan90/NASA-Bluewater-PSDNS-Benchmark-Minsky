@@ -1,7 +1,7 @@
       subroutine vorout (lu)
  
 	use comsp
-	include 'intvars'
+	!#deepcustom# 	implicit none
  
 ! write out vorticity spectra, like sub. eulout
  

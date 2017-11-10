@@ -1,7 +1,7 @@
         subroutine waveno
 c
 	use com
-	include 'intvars'
+	!#deepcustom# 	implicit none
 c
 c  routine to form differential operators
 c

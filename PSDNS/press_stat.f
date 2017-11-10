@@ -4,8 +4,8 @@
 c
 
       use comsp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
 	real, allocatable :: eky(:),eks(:)
 c

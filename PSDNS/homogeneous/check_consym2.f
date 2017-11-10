@@ -1,7 +1,7 @@
       subroutine check_consym2 (uy,nv,title,shellk)
       use comsp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
       complex(b8) :: uy(ny,xisz*zjsz,nv)
       integer :: nzp2,nyp2,xst,k,ik,lu,nchar,a,shellk
       real :: term,rk2,cmag1,cmag2,cmag3,diff, difmax

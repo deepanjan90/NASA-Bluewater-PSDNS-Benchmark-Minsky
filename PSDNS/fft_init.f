@@ -5,7 +5,7 @@ C Initialize work arrays for ESSL
       subroutine init_work
       
       use com
-      implicit none
+      !#deepcustom#	implicit none
 
       integer err,ithr,omp_get_thread_num
 

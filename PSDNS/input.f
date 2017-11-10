@@ -16,7 +16,7 @@ c
 #endif
       USE IO
 
-	implicit none
+	!#deepcustom#	implicit none
 	integer lu,i,j,nchar
 	character*256 caux
 	real(b8), allocatable :: rsendbuf(:)

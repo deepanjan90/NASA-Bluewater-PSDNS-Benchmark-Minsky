@@ -10,9 +10,9 @@
           use comsp
 	use timers_rkstep
 	use timers_tran
-          implicit none
-          include 'intvars'
-#include "fft_stuff.f"
+          !#deepcustom#	implicit none
+          !#deepcustom# 	implicit none
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
           real(b8) :: ux(nxpad,zisz,yjsz,nu)
           complex(b8) :: uz(nzpad,xisz,yjsz,nu)
 #ifdef HOMOGENEOUS
@@ -578,8 +578,8 @@ c
 	subroutine i_reorder_yz_trans_y(uy,uz,int)
 
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	integer i,dnz,iz,iy,int
 	complex(b8) uz(nzpad,xisz,yjsz,int)
@@ -648,8 +648,8 @@ c #endif
 	subroutine i_reorder_xz_trans_x(uz,ux)
 
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	complex(b8) uz(nzpad,xisz)
 	real(b8) ux(nxpad,zisz)
@@ -668,10 +668,10 @@ c
 ! Transpose for buf x <-> Z and pad in X, zero highest mode
 
 	do z=1,nzpad,NB1_Z
-	   z2 = min(z+NB1_Z-1,nzpad)
+	   z2 = min(z+NB1_Z-1,real(nzpad))
 	   
 	   do x=1,nxhp,NB1_X
-	      x2 = min(x+NB1_X-1,xisz)
+	      x2 = min(x+NB1_X-1,real(xisz))
 	      
 	      do iz=z,z2
 		 do ix=x,x2

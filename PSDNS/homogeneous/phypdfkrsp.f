@@ -7,8 +7,8 @@ c
 c PDF of (vx-a)/b
 c
 	use mpicom
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
         real(b8) :: vx(nx,zisz,yjsz)
 c

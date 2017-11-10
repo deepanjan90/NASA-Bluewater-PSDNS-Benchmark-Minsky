@@ -17,7 +17,7 @@ c and/or num_thr
 
 
       use com
-      include 'intvars'
+      !#deepcustom# 	implicit none
 	character*(*) label
 c     
 	integer nchar,nn,ntotal

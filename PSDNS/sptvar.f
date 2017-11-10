@@ -5,8 +5,8 @@ c w.r.t. pure MPI version is possible when adding up
 c contributions to spectrum from different threads
 
       use comsp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       complex(b8) uny(ny,zjsz*xisz,3)
 c

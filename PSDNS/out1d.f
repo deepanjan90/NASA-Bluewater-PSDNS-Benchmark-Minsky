@@ -9,8 +9,8 @@
 !
 	use comsp
 !
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 !
 	integer i,j,l,lu1,lu2,io,ij
 	real unit

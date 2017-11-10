@@ -1,8 +1,8 @@
       subroutine incomm_row  (uny,iproc0,jproc0,ixfst,ixlst,jzfst,jzlst,ndirs,ind_prec,bwin,relay,itask, mys)
       use comp
       use timers_io
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 c
 c Changes (re: "mys") by PKY, 12/9/2015
       

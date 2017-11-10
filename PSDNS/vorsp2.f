@@ -1,7 +1,7 @@
       subroutine vorsp2 (ifc,ilc,m)
 c
 	use comsp
-	include 'intvars'
+	!#deepcustom# 	implicit none
 c
 	integer ithr
 c

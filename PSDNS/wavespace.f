@@ -4,10 +4,10 @@
         !to be wavespace in wavespace_module
         use wavespace_module
         use comp
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
         
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
         
 	integer :: i,j,m, is1, i2f
         complex(b8) :: uy(xisz,zjsz,ny,nu)

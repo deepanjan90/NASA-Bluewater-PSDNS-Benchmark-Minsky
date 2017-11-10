@@ -18,10 +18,10 @@ c
       use timers_comm
       use timers_comp
       use timers_tran
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       integer i,j,iz,dnz,iy,ia,a1,a2,c,nv
@@ -196,7 +196,7 @@ c
          do i=jpp1(ithr),jpp1(ithr)+jppi(ithr)-1
 c
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                do a=1,num_al,NB2_Z
                   a2 = min(a+NB2_Z-1,num_al)
                   pos1 = a + (y-jjst(i))*num_al
@@ -277,8 +277,8 @@ c
 
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       integer i,j,iz,dnz,iy,ia,a,a1,a2,c,nv
       complex(b8) source(xisz,nz,yjsz,nv)
@@ -370,8 +370,8 @@ c
 
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       integer position,pos0,pos1,pos2,n,nv
       complex(b8) source(nz,xisz,yjsz,nv)
@@ -453,7 +453,7 @@ c
          do i=0,jproc-1
             
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                
                do a=1,num_al,NB2_Z
                   a2 = min(a+NB2_Z-1,num_al)
@@ -504,10 +504,10 @@ c
 
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       complex(b8) source(nzpad,xisz,yjsz)
@@ -606,10 +606,10 @@ c
             
             pos0 = (x-1)*zjsz 
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
 
                do z=1,zjsz,NB2_Z
-                  z2 = min(z+NB2_Z-1,zjsz)
+                  z2 = min(z+NB2_Z-1,real(zjsz)) !#deepcustom#
                   pos1 = pos0 +z
                   
                   do iy=y,y2

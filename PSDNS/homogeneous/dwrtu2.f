@@ -1,8 +1,8 @@
       subroutine dwrtu2(uny)
 	use comp
 	use timers_io
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
         complex(b8) :: uny(ny,zjsz*xisz,3+nc)
 c

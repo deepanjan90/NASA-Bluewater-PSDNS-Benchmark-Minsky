@@ -7,8 +7,8 @@ c  u(kx,ky,kz) contains x-y planes of initial data
 c
       subroutine enfsym (uny)
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       integer i,j,zdest,zorig,ip,ircont,iscont,ik
       integer, allocatable :: compgrid(:,:)

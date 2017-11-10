@@ -2,7 +2,7 @@
 	subroutine eulout
 	
 	use comsp
-	implicit none       
+	!#deepcustom#	implicit none       
 	integer lu,i,j
 	real uiui,sumjeps
 	integer :: k,ios

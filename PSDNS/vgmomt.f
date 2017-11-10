@@ -4,7 +4,7 @@ c hybridized version by PKY, 1/1/2012
 c 
 c
 	use comp
-	include 'intvars'
+	!#deepcustom# 	implicit none
 c
 c up to 8th order moments added, 12/18/01
 c

@@ -9,8 +9,8 @@ c converted to cylindrical truncation scheme, by P.K.Y and D.D., 11/29/09
 #ifdef FEK_FORC
 	use comsp
        
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	integer a
 	complex(b8) :: uny(ny,zjsz*xisz,3+nc)       

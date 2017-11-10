@@ -1,6 +1,6 @@
         subroutine escfft(u,itrans,ivec,ntrans,nvec,isgn,ithr)          
 #ifdef ESSL	 
-#include "fft_stuff.f" 
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom# 
 c                           
 c essl library version of old sub. cfft99                               
 c                  

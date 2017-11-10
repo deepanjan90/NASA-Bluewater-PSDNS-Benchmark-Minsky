@@ -7,7 +7,7 @@
 	use timers_rkstep
 	use timers_tran
 
-        implicit none
+        !#deepcustom#	implicit none
 
 	integer itask,i,i2t,ii,jj
 	real(8) sum,comm2

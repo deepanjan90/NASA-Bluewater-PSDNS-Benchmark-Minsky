@@ -10,8 +10,8 @@ c Also removed old choice of iwfld (always operate with iwfld=2)
 c
 c
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	complex(b8) :: buf(xisz,ny,zjsz,3+nc)
 c

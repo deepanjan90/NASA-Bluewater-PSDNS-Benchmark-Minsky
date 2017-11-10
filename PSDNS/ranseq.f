@@ -37,7 +37,7 @@ c
 #ifdef RANDOM_SEED
 	use ranseed
 #endif
-	implicit none
+	!#deepcustom#	implicit none
 c
 	integer iseq,nk,klast
         parameter ( nk=20 )

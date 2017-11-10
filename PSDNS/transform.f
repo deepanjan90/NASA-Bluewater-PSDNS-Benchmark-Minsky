@@ -11,9 +11,9 @@
 	use comp
 	use timers_rkstep
 	use timers_tran
-	implicit none
-	include 'intvars'
-#include "fft_stuff.f"
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 	real(b8) factor
 	complex(b8), allocatable :: buf(:,:),buf1(:,:,:)
  	real(b8)    :: ux(nxpad,zisz,yjsz,nu)
@@ -305,8 +305,8 @@ c       do 70 yp=yp1,yp2
       subroutine f_reorder_xz_trans_xz(ux,uz,int)
 
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       complex(b8) uz(nzpad,xisz,yjsz,int)
       real(b8) ux(nxpad,zisz,yjsz,int)
@@ -331,10 +331,10 @@ c       do 70 yp=yp1,yp2
 
 
             do z=1,nzpad,NB1_Z
-               z2 = min(z+NB1_Z-1,nzpad)
+               z2 = min(z+NB1_Z-1,real(nzpad))
                
                do x=1,nxh,NB1_X
-                  x2 = min(x+NB1_X-1,nxh)
+                  x2 = min(x+NB1_X-1,real(nxh))
                   
                   do iz=z,z2
                      do ix=x,x2
@@ -367,8 +367,8 @@ c       do 70 yp=yp1,yp2
       subroutine f_reorder_yz_trans_y(uz,uy,int)
 
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
       integer i,iz,iy,dnz,int
       complex(b8) uz(nzpad,xisz,yjsz,int)

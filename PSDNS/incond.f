@@ -7,8 +7,8 @@ c
       subroutine incond
       use comsp
       USE IO
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
      
       character*2 str
       character*5 numer

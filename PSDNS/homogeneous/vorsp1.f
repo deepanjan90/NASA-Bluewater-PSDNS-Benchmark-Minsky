@@ -5,8 +5,8 @@
  
       subroutine vorsp1 (uy,m,ithr,bk2y) 
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
  
 	complex(b8) uy(ny,zjsz*xisz,3) 
 !	complex(b8), allocatable :: bk2y(:)

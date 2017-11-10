@@ -3,8 +3,8 @@ c
 #ifdef VORPHY
 
       use comsp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
 	real(b8) omx(nx,zisz,yjsz,3)
         real(4), allocatable :: omxsp(:,:)

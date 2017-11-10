@@ -2,8 +2,8 @@
 !
       subroutine proc4b (uy,uny)
         use comsp
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
         complex(b8) :: uy(ny,zjsz*xisz,nu)
         complex(b8) :: uny(ny,zjsz*xisz,3+nc)
         real(b8) bk12 

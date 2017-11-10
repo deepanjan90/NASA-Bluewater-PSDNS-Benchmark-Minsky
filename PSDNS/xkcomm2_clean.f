@@ -19,10 +19,10 @@ c
       use timers_comm
       use timers_comp
       use timers_tran
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       complex(b8) source(nzpad,xisz,yjsz,nv)
@@ -196,7 +196,7 @@ c
          do i=jpp1(ithr),jpp1(ithr)+jppi(ithr)-1
 c
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                do a=1,num_al,NB2_Z
                   a2 = min(a+NB2_Z-1,num_al)
                   pos1 = a + (y-jjst(i))*num_al

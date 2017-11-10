@@ -6,8 +6,8 @@ c
 c (this info is used, e.g., by masks.f)
 
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 	integer a
 c
         integer ithr,ia

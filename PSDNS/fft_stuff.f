@@ -1,7 +1,7 @@
 #ifdef FFTW
       include "fftw3.f"
 
-!     implicit none
+!     !#deepcustom#	implicit none
 
       integer*8 plan1,plan2,plan3 
 ! next line added PK Yeung 2/4/07
@@ -55,6 +55,6 @@
 !     1              raux1(rnaux1),raux2(rnaux2),raux3(rnaux3)           
 
 !      use fft_ar
-!      implicit none
+!      !#deepcustom#	implicit none
 
 #endif

@@ -5,7 +5,7 @@ c
 #ifndef NOSCALAR
 c
 	use comsp
-	include 'intvars'
+	!#deepcustom# 	implicit none
 c
 c values in physical space, called from sub. proc2a
 c

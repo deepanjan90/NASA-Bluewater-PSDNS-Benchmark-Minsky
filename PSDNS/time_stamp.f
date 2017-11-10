@@ -2,7 +2,7 @@
 c
 	use mpicom, only: taskid
 c
-      implicit none
+      !#deepcustom#	implicit none
 
       integer dmy(3),hms(3),date_time(8)
 c
@@ -29,7 +29,7 @@ c
 c
 	use mpicom, only: taskid
 c
-      implicit none
+      !#deepcustom#	implicit none
 
       integer dmy(3),hms(3),date_time(8)
 c

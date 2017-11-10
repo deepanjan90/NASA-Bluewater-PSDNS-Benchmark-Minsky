@@ -1,8 +1,8 @@
         subroutine phymsq (vx,meansq)
                                                                                 
         use com
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
                                                                                 
         real(b8) :: vx(nx,zisz,yjsz)
 	  real*8 :: sum1

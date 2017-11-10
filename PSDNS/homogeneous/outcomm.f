@@ -11,8 +11,8 @@ c
       USE IO
 	use comp
 c       use rewrite
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	complex(b8) :: uny(ny,xisz*zjsz,3+nc)
 c

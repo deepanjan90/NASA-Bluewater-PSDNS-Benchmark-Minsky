@@ -2,7 +2,7 @@
 c
       use comsp
 c
-      implicit none
+      !#deepcustom#	implicit none
 #ifdef MODEL_SPECTRUM
       LOGICAL :: exs
       INTEGER :: exsInt, stat, mxyzIn

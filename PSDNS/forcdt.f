@@ -2,7 +2,7 @@
 c
 c
 	use comsp
-	implicit none
+	!#deepcustom#	implicit none
 
 	integer i,k
 c

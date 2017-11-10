@@ -1,7 +1,7 @@
       subroutine pcheck (unxr)
 c
       use com
-	include 'intvars'
+	!#deepcustom# 	implicit none
 c
 c set initial velocity field in physical space
 c

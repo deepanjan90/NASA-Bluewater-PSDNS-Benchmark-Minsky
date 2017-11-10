@@ -35,8 +35,8 @@ c
 c
 	use comp
 	use force_mod
- 	implicit none
-	include 'intvars'
+ 	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	integer i,nword,icall,ifwave,iyz,nyz
 	complex :: alpha,beta
@@ -93,8 +93,8 @@ c
 c
 c    form unnormalised wave number vectors
 c
-        k2u=s2 * ky( ifwave(y,ny) )
-        k3u=s3 * kz( ifwave(z,nz) )
+        k2u=s2 * ky( ifwave(integer(y),ny) ) !#deepcustom#
+        k3u=s3 * kz( ifwave(integer(z),nz) ) !#deepcustom#
 c
         do 10 x=1,kfor
 c

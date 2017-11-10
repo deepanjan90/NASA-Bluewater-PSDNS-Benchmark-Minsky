@@ -2,8 +2,8 @@
 c
       use comsp
 c
-      implicit none
-	include 'intvars'
+      !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	complex(b8) :: uy(ny,xisz*zjsz)
 c

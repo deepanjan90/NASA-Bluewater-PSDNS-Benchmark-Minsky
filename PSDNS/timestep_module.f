@@ -9,7 +9,7 @@
 	use comsp
 	use timers_rkstep
 	use timers_tran
-	implicit none
+	!#deepcustom#	implicit none
 	
 	public  :: timestep
 
@@ -71,8 +71,8 @@ c PKY: attempted extension  to RK4
 #if defined (LAG) || defined (LAG_LOCAL)
         use compart, only: iolflag
 #endif
-          implicit none
-          include 'intvars'
+          !#deepcustom#	implicit none
+          !#deepcustom# 	implicit none
           real strof
           integer i,ii,rkstep,iost,test,j,k,m,a,ymax,almax,jj
           logical flagt

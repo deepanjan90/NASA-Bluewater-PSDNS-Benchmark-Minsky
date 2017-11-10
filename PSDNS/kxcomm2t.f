@@ -19,10 +19,10 @@
       use timers_comm
       use timers_comp
       use timers_tran
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
 	integer npy
       real(b8) dest(nxpad,zisz,npy,nv)
@@ -123,11 +123,11 @@ c
          ii = mymap(i)
          
          do z=kist(ii),kien(ii),NB1Z
-            z2 = min(z+NB1Z-1,kien(ii))
+            z2 = min(z+NB1Z-1,real(kien(ii))) !#deepcustom#
             pos0 = (z-kist(ii))*xisz
             
             do x=1,xisz,NB1_X
-               x2 = min(x+NB1_X-1,xisz)
+               x2 = min(x+NB1_X-1,real(xisz)) !#deepcustom#
                pos1 = pos0 + x
                
                do iz=z,z2

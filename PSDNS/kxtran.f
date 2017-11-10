@@ -16,10 +16,10 @@
 
       subroutine kxtran (XgZY,XZgY,XZYg,nv)
       use com
-      implicit none
-	include 'intvars'
+      !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 !
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
       complex(b8) XgZY(nxpad/2,zisz,yjsz,nv)
       complex(b8) XZgY(nz,xisz,yjsz,nv)

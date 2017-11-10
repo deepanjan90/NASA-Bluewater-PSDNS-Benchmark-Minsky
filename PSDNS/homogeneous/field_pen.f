@@ -6,8 +6,8 @@ c version using a non-cylindrical "pencils" structure
 	
 	use ranseed
 c
- 	implicit none
-	include 'intvars'
+ 	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	complex(b8) :: uny(xisz,zjsz,ny,3+nc)
 

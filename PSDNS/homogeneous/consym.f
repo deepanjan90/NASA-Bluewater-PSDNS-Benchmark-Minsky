@@ -11,8 +11,8 @@ c  u(kx,ky,kz) contains x-y planes of initial data
 c
       subroutine consym (uny,nv)
       use comp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
       integer i,j,zdest,zorig,ip,ircont,iscont,ik
       integer, allocatable :: compgrid(:,:)
       integer, allocatable :: sid(:),rid(:)

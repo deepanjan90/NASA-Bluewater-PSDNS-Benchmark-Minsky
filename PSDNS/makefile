@@ -9,10 +9,10 @@ SHELL=/bin/bash
 #MACHINE = craycce
 # suggested by D. Whitaker (Cray)
 # run 'module swap PrgEnv-pgi PrgEnv-cray' first
-#MACHINE = intel
+MACHINE = intel
 #MACHINE = intel.edison
 #MACHINE = intel.comet
-MACHINE = BW
+#MACHINE = BW
 
 #MACHINE = mira
 #MACHINE = mira.essl
@@ -247,24 +247,26 @@ ifeq ($(MACHINE),intel) ###############################################
   FF = mpif90
 #  FFLAGS = -132 -no-vec
 #  FFLAGS = -132 -O3 #-xW #-fast
-FFLAGS = -132 -O3 -convert big_endian -assume buffered_io #-xhost
-FFLAGS90 = -O3 -convert big_endian -assume buffered_io #-xhost
+#-assume buffered_io #deepcustom#
+FFLAGS = -ffixed-line-length-132 -O3 -fconvert=big-endian -fcoarray=single #-xhost
+FFLAGS90 = -O3 -fconvert=big-endian #-xhost
 #-O3 -xW -fast
   ifneq (,$(findstring OPENMP,$(CPPFLAGS)))
     FFLAGS += -openmp
   endif
   ifneq (,$(findstring DOUBLE_PREC,$(CPPFLAGS)))
-    FFLAGS += -r8
+    FFLAGS += -fdefault-real-8
   endif
-  CPP = /lib/cpp -traditional
+  CPP = /lib/cpp -traditional -undef #deepcustom#
   # run "module load fftw3" before make
   FFT_LIB = -L$(TACC_FFTW3_LIB) -lfftw3 -lfftw3f
-  FFT_INC = -I$(TACC_FFTW3_INC)
+  FFT_INC = -I /home/deep8/workspace/benchmark/PSDNS/fftw/api/
 # On Stampede: must do a 
 # swap intel intel/14.0.1.106
 # module load fftw3 phdf5
   HDF_LIB = -Wl,-rpath,$(TACC_HDF5_LIB) -L$(TACC_HDF5_LIB) -lhdf5_fortran -lz
-  HDF_INC = -I$(TACC_HDF5_INC)
+  #HDF_INC = -I$(TACC_HDF5_INC) #deepcustom#
+  HDF_INC = -I /home/deep8/workspace/benchmark/GEOS2/Baselibs/src/hdf5/fortran/src
   # run "module load mkl" before make
 #  MKL_LIB = -L$(TACC_MKL_LIB) -lmkl -lguide -lpthread
 #  MKL_INC = -I$(TACC_MKL_INC)

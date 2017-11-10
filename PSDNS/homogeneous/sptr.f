@@ -2,8 +2,8 @@
 c
       use comsp
 c
-      implicit none
-	include 'intvars'
+      !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 	complex(b8) :: uny(ny,zjsz*xisz,3+nc)
 	integer :: io,i,j,k,ij,ncount,ik,m,a,get_l

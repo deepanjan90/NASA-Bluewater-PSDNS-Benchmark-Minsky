@@ -2,11 +2,11 @@
 c
 #ifdef VORPHY
             use comp
-            implicit none
-            include 'intvars'
+            !#deepcustom#	implicit none
+            !#deepcustom# 	implicit none
 
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
             complex(b8) :: uy(nypad,zjsz*xisz,3)
             complex(b8) :: omy(nypad,zjsz*xisz,3)

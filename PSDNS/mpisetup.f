@@ -3,7 +3,7 @@
 #ifdef LAG
         use mpilag
 #endif
-        implicit none
+        !#deepcustom#	implicit none
         
         integer i,j,k,n1,ixp
 	logical iex
@@ -262,7 +262,7 @@ c         call spline_initialize !member function of module: mpilag
 !==================================================================       
       subroutine MapDataToProc (data,proc,st,en,szs)
 !    
-       implicit none 
+       !#deepcustom#	implicit none 
        integer data,proc,st(0:proc-1),en(0:proc-1),szs(0:proc-1)
        integer i,size,nadd,size2
       size=data/proc
@@ -296,7 +296,7 @@ c         call spline_initialize !member function of module: mpilag
 #ifdef LAG
         use mpilag
 #endif
-        implicit none
+        !#deepcustom#	implicit none
         
         integer ii,i,j,k,n1,ixp,x,c,n,xp,zp,z,xz(2)
         integer xz_tot
@@ -637,7 +637,7 @@ c        endif
       subroutine get_xz(a1,x,start_z,xz)
 
       use comp
-      implicit none
+      !#deepcustom#	implicit none
       integer a,z,a1
       integer x,z1,z2,c,start_z,xz(2)
 
@@ -677,7 +677,7 @@ c         call get_xz(z - nz,x +1,1,xz)
       recursive subroutine get_xz2(l,x,zi,xz)
 
       use comp
-      implicit none
+      !#deepcustom#	implicit none
       integer l,z
       integer x,z1,z2,c,zi,xz(2)
 
@@ -710,7 +710,7 @@ c         call get_xz(z - nz,x +1,1,xz)
       subroutine next_xz(x,z)
 
       use comp
-      implicit none
+      !#deepcustom#	implicit none
       integer x,z,c,z1,z2
 
       c = cut_z(x)
@@ -734,7 +734,7 @@ c         call get_xz(z - nz,x +1,1,xz)
       subroutine create_balance_map
 
       use comp
-      implicit none
+      !#deepcustom#	implicit none
       integer i, id,st,en,n
 
       st = 0

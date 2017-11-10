@@ -2,7 +2,7 @@
  
 #ifndef NOSCALAR
 	use comsp
-	include 'intvars'
+	!#deepcustom# 	implicit none
  
 ! phymom must be called first in order to get the variance
 !

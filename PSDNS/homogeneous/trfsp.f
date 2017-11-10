@@ -1,8 +1,8 @@
       subroutine trfsp (uny,uy,m)
 c
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	complex(b8) :: uny(ny,zjsz*xisz,3)
 	complex(b8) :: uy(ny,zjsz*xisz,3)

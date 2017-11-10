@@ -10,8 +10,8 @@ c lu2 for 1-dimensional spatial correlation
 c
 	use comsp
 c
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	integer i,lu2,ij
 	real factor1

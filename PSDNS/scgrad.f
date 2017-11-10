@@ -4,8 +4,8 @@ c Fixes made by P.K Yeung, 10/27/09
  
 #ifndef NOSCALAR
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
  
 	integer i,j,k,ij
 	real factor, sum

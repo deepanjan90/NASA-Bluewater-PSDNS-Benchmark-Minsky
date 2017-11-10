@@ -4,8 +4,8 @@
       subroutine inpen_read_bw  (uny,slabpenc,iproc0,ixfst,ixlst,jzfst,jzlst,ndirs,ind_prec,relay,xi1,zj1,itask)
       use comp
       use timers_io
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
       
 c It doesnt really matter how we declare uny here; 
 c Upon exit, uny will contain data in cylindrical form, that is 

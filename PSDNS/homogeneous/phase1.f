@@ -1,10 +1,10 @@
           subroutine phase1 (uy,m)
 c
             use comp
-            implicit none
-            include 'intvars'
+            !#deepcustom#	implicit none
+            !#deepcustom# 	implicit none
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
             complex(b8) :: uy(nypad,zjsz*xisz,nu)
             integer :: i,j,m

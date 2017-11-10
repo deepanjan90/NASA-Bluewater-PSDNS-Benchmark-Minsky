@@ -44,7 +44,7 @@ c#ifdef LAG
 	use compart, only: nop,nop2,nom,lpgrad,ngm,nompp,nom,iolflag
 #endif
 
-        implicit none
+        !#deepcustom#	implicit none
 
       integer dmy(3),hms(3),date_time(8)
 !

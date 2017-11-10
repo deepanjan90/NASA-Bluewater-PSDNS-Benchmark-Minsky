@@ -3,8 +3,8 @@ c
 #ifdef CVC_PRESS
 
       use comsp
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
 	real(b8) upx(nx,zisz,yjsz)
         real(4), allocatable :: upxsp(:,:)

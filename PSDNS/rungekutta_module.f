@@ -14,7 +14,7 @@
       
       module rungekutta_module
         use comp
-        implicit none
+        !#deepcustom#	implicit none
         save
         
         public :: rkscheme,rk_structure,rungekutta_initialize

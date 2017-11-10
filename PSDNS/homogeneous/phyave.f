@@ -3,8 +3,8 @@ c
 c compute the mean only
 c
 	use mpicom
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 c
 c beware of possible underfloat errors arising from taking fourth

@@ -11,7 +11,7 @@
 !################################################
       module wavespace_module
       use comp
-      implicit none
+      !#deepcustom#	implicit none
   
 
       public  :: wavespace_sub, initialize_wavespace, yitransform_sub
@@ -29,10 +29,10 @@
 !############################################
           subroutine yitransform_sub(uy,m)
             use comp
-            implicit none
-            include 'intvars'
+            !#deepcustom#	implicit none
+            !#deepcustom# 	implicit none
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
             complex(b8) :: uy(nypad,zjsz*xisz,nu)
             integer :: i,j,m
@@ -142,11 +142,11 @@ c
 !#     Built on proc3.f
 !############################################
         subroutine wavespace_sub(uy,m)
-          implicit none
+          !#deepcustom#	implicit none
 !          use comp
-          include 'intvars'
+          !#deepcustom# 	implicit none
  
-#include "fft_stuff.f" 
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom# 
           integer :: i,j,m, is1, i2f,a,xz(2)
           complex(b8) :: uy(ny,zjsz*xisz,nu)
           complex(b8), allocatable :: shift(:)
@@ -421,7 +421,7 @@ c           endif
 !#
 !############################################
         subroutine initialize_wavespace
-          implicit none
+          !#deepcustom#	implicit none
       
 
         end subroutine initialize_wavespace

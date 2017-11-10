@@ -10,8 +10,8 @@
 !############################################
         subroutine wavespace_vel(uy,m)
            use comp
-          implicit none
-          include 'intvars'
+          !#deepcustom#	implicit none
+          !#deepcustom# 	implicit none
  
           integer :: i,j,m, is1, i2f,a,xz(2)
 

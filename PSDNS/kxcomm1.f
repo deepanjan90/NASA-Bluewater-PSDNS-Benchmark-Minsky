@@ -16,10 +16,10 @@
       use timers_comp
       use timers_tran
 
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       integer i,j,iz,dnz,iy,ia,a1,a2,c,nv
@@ -149,7 +149,7 @@ c
                 do y=jjst(i),jjen(i),NB2_Y
 
 
-                  y2 = min(y+NB2_Y-1,jjen(i))
+                  y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                
                   do a=1,num_al,NB2_Z
                      a2 = min(a+NB2_Z-1,num_al)
@@ -340,8 +340,8 @@ c
 
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
       integer position,pos0,pos1,n,nv,cnt
       complex(b8) source(ny,zjsz,xisz,nv)
       complex(b8) dest(nz,xisz,yjsz,nv)
@@ -378,10 +378,10 @@ c      allocate (recvbuf(xisz*yjsz*nz,nv,1))
             pos0 = (x-1)*zjsz 
 
             do y=1,ny,NB2_Y
-               y2 = min(y+NB2_Y-1,ny)
+               y2 = min(y+NB2_Y-1,real(ny)) !#deepcustom#
                
                do z=1,zjsz,NB2_Z
-                  z2 = min(z+NB2_Z-1,zjsz)
+                  z2 = min(z+NB2_Z-1,real(zjsz)) !#deepcustom#
                   pos1 = pos0 +z
                   
                   do iy=y,y2
@@ -476,8 +476,8 @@ c      allocate (recvbuf(xisz*yjsz*nz,nv,1))
 
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
       integer position,pos0,pos1,n,nv
       complex(b8) source(ny,zjsz*xisz,nv)
       complex(b8) dest(xisz,nz,yjsz,nv)
@@ -518,7 +518,7 @@ c      allocate (recvbuf(xisz*yjsz*nz,nv,1))
          do i=0,jproc-1
 
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                
                do a=1,num_al,NB2_Z
                   a2 = min(a+NB2_Z-1,num_al)
@@ -656,10 +656,10 @@ c                    dest(z,x,y,j) = 0.0
       subroutine kxcomm1_trans_pen (source,dest)
       use com
       use timers_comm
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       complex(b8) source(nypad,zjsz,xisz)
@@ -714,10 +714,10 @@ c                    dest(z,x,y,j) = 0.0
             pos0 = (x-1)*zjsz 
 
             do y=jjst(i),jjen(i),NB2_Y
-               y2 = min(y+NB2_Y-1,jjen(i))
+               y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
 
                do z=1,zjsz,NB2_Z
-                  z2 = min(z+NB2_Z-1,zjsz)
+                  z2 = min(z+NB2_Z-1,real(zjsz)) !#deepcustom#
 
                   pos1 = pos0+z
                   do iy=y,y2

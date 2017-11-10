@@ -6,8 +6,8 @@ c PKY: extension of proc4b for 1st substep of RK-4
 #ifdef RKFOUR
 #ifndef MAY28
         use comsp
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
         complex(b8) :: uy(ny,zjsz*xisz,nu)
         complex(b8) :: uny(ny,zjsz*xisz,3+nc)
         complex(b8) :: u1y(ny,zjsz*xisz,3+nc)

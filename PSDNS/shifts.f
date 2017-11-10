@@ -1,7 +1,7 @@
 	subroutine shifts
 c
 	use com
-	include 'intvars'
+	!#deepcustom# 	implicit none
 
 c
 c kshift=1: random shifts, in which the aliasing error on the

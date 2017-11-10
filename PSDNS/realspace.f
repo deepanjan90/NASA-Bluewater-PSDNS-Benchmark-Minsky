@@ -6,9 +6,9 @@
 !#######################################################
 	subroutine realspace(ux,m,rkstep)
           use comp
-          implicit none
-          include 'intvars'
-#include "fft_stuff.f"
+          !#deepcustom#	implicit none
+          !#deepcustom# 	implicit none
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 !	real(b8) factor
  	real(b8)    :: ux(nxpad,zisz,yjsz,nu)
 

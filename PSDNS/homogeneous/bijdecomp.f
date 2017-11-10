@@ -2,8 +2,8 @@
 #ifdef MHD
 c
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	complex :: uny(ny,zjsz*xisz,3)
 	real, parameter :: pir = .25/atan(1.)

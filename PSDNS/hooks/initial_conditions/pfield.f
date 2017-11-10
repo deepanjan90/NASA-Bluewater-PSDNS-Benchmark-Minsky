@@ -11,7 +11,7 @@
 !#########################################
       subroutine pfield (unxr)
       use com
-      include 'intvars'
+          !#deepcustom# include 'intvars'
 c     
 c     set initial velocity field in physical space
 c     

@@ -1,6 +1,6 @@
       subroutine print_hwm
       use mpicom
-      implicit none
+      !#deepcustom#	implicit none
       integer, parameter :: lun=99
       character*80 :: line
       integer(kind=8):: hwmrss(2)

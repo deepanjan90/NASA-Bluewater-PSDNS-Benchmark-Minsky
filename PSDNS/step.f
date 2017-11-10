@@ -13,7 +13,7 @@
 ! (D. Buaria, 8/23/12)
  
 	use comp
-c	implicit none
+c	!#deepcustom#	implicit none
 #include "intvars"
  
       real, allocatable :: logx(:),logy(:),logz(:),bk12(:)

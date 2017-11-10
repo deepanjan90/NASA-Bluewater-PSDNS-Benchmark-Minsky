@@ -18,10 +18,10 @@
       use timers_tran
 	use timers_rkstep
 
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 #ifdef FFTW
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 #endif
 
       complex(b8) source(ny,zjsz*xisz,nv)
@@ -138,7 +138,7 @@ c
                 do y=jjst(i),jjen(i),NB2_Y
 
 
-                  y2 = min(y+NB2_Y-1,jjen(i))
+                  y2 = min(y+NB2_Y-1,real(jjen(i))) !#deepcustom#
                
                   do a=1,num_al,NB2_Z
                      a2 = min(a+NB2_Z-1,num_al)

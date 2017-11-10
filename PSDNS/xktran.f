@@ -1,9 +1,9 @@
       subroutine xktran (Source,buf1,Dest,nv)
       use com
-      implicit none
+      !#deepcustom#	implicit none
 #include "intvars"
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
       real(b8) Source(nxpad,zisz,yjsz,nv)
       complex(b8) buf1(nzpad,xisz,yjsz,nv)

@@ -1,8 +1,8 @@
       subroutine phshift (uy,vy,nv,nps,ev)
 c
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
         integer nv,ev
       complex(b8) uy(ny,zjsz*xisz,nv)
@@ -71,8 +71,8 @@ c
       subroutine phshift_inplace (uy,nv,ev)
 c
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
         integer nv,ev
       complex(b8) uy(ny,zjsz*xisz,nv)

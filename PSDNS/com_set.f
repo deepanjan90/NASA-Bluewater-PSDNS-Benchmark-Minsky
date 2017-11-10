@@ -2,7 +2,7 @@
 c
 	use com
 c
-      implicit none
+      !#deepcustom#	implicit none
       logical :: iex
 c
         if (taskid.eq.0) write (6,*) 'enter com_set'

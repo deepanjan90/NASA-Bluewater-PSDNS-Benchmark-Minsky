@@ -1,8 +1,8 @@
       subroutine phymom4 (vx,nv,i1,i2,momt)
 c
 	use comsp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 c
 	integer nv
 	real(b8) :: vx(nx,zisz,yjsz,nv)

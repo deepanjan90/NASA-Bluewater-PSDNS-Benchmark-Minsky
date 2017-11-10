@@ -7,8 +7,8 @@ c may not be multiple of 4096 but would be a multiple of 6144
 c
 	use timers_io
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
         !NPM converted to stride-1 3/6/08
         complex(b8) :: uny(ny,zjsz,xisz,3+nc)
 

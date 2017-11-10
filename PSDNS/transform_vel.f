@@ -11,9 +11,9 @@
 	use comp
 	use timers_rkstep
         use timers_tran
-	implicit none
-	include 'intvars'
-#include "fft_stuff.f"
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
  	real(b8)    :: ux(nxpad,zisz,yjsz,nu)
  	complex(b8) :: uz(nzpad,xisz,yjsz,nu)
  	complex(b8) :: uy(nypad,zjsz*xisz,nu)

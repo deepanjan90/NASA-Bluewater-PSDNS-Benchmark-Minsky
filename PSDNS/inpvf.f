@@ -8,8 +8,8 @@ c
 !NPM converting to stride-1 3/16/09 
       subroutine inpvf(unxr,uxr)
 	use comp
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 
 #ifndef UNEV
       real(b8) :: unxr(nxpad,zisz,yjsz,3)

@@ -18,10 +18,10 @@
       use timers_comm
       use timers_comp
       use timers_tran
-      implicit none
-      include 'intvars'
+      !#deepcustom#	implicit none
+      !#deepcustom# 	implicit none
 
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 
 c        complex(b8) dest(nxpad/2,zisz,yjsz,nv)
         real(b8) dest(nxpad,zisz,yjsz,nv)
@@ -119,11 +119,11 @@ c
                 pos0 = xisz * kisz(ii) * (yp-1)
 
                do z=kist(ii),kien(ii),NB1_Z
-                  z2 = min(z+NB1_Z-1,kien(ii))
+                  z2 = min(z+NB1_Z-1,real(kien(ii))) !#deepcustom#
                   pos1 = pos0 + (z-kist(ii))*xisz
 
                   do x=1,xisz,NB1_X
-                     x2 = min(x+NB1_X-1,xisz)
+                     x2 = min(x+NB1_X-1,real(xisz)) !#deepcustom#
                      pos2 = pos1 + x
 
                      do iz=z,z2

@@ -5,8 +5,8 @@ c PKY: "proc4d" for 4th substep of RK-4
       subroutine advanc_4 (uy,uny,u1y)
 #ifdef RKFOUR
         use comsp
-        implicit none
-	include 'intvars'
+        !#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
         complex(b8) :: uy(ny,zjsz*xisz,nu)
         complex(b8) :: uny(ny,zjsz*xisz,3+nc)
 !RAF        complex(b8) :: u1y(ny,zjsz*xisz,3+nc)

@@ -5,7 +5,7 @@
 	use com
 	use timers_comm
 	use timers_io
-      implicit none
+      !#deepcustom#	implicit none
 	real :: aux(3),aux2, acccpu2
 #ifdef TIMERS_IO	  
 	real :: aux3(3),aux4

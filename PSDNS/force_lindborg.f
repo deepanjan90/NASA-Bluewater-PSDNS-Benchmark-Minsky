@@ -5,8 +5,8 @@
 #ifdef LINDBORG
 	use comsp
 	
-	implicit none
-	include 'intvars'
+	!#deepcustom#	implicit none
+	!#deepcustom# 	implicit none
 	
 	complex(b8) :: uny(ny,zjsz,xisz,3+nc)	  
 	integer :: i,j,k,l,ik,m,icall

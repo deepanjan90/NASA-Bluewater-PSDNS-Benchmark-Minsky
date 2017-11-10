@@ -1,6 +1,6 @@
         subroutine escpft(u,itrans,ivec,ntrans,nvec0,isgn,ithr)               
 #ifdef ESSL
-#include "fft_stuff.f"
+#include "/home/deep8/workspace/benchmark/PSDNS/fftw/api/fftw3.f" !#deepcustom#
 c                                                                       
 c essl library version                                                  
 c this call to set up auxiliary arrays for complex fft                  
